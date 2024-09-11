@@ -15,6 +15,20 @@ return (0);
 left_height = binary_tree_height(tree->left);
 right_height = binary_tree_height(tree->right);
 
+if (tree->left == NULL && tree->right == NULL)
+return (0);
 
-return (1 + (left_height > right_height ? left_height : right_height));
+return (1 + tallest_tree(left_height, right_height));
+}
+
+/**
+ * tallest_tree - Compares the height of a binary tree
+ * @a: first number
+ * @b: second number
+ * Return: The tallest tree
+ */
+
+int tallest_tree(int a, int b)
+{
+return (a > b ? a : b);
 }
